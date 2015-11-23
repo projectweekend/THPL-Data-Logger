@@ -15,8 +15,7 @@ BEGIN
                         temp_c,
                         humidity,
                         pressure,
-                        luminosity,
-                        logged_at
+                        luminosity
                     )
     VALUES          (
                         sensorName,
@@ -24,8 +23,7 @@ BEGIN
                         CAST(thplData->>'temp_c' AS NUMERIC),
                         CAST(thplData->>'humidity' AS NUMERIC),
                         CAST(thplData->>'pressure' AS NUMERIC),
-                        CAST(thplData->>'luminosity' AS NUMERIC),
-                        CAST(thplData->>'logged_at' AS TIMESTAMP WITHOUT TIME ZONE)
+                        CAST(thplData->>'luminosity' AS NUMERIC)
                     );
 END;
 $$
