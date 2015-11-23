@@ -1,5 +1,7 @@
 db:
     image: postgres:9.4
+    ports:
+        - "5432:5432"
 flyway:
     image: projectweekend/flyway
     volumes:
@@ -14,3 +16,6 @@ app:
         - .:/src
     links:
         - db
+    environment:
+        PICLOUD_URL:
+        PICLOUD_API_KEY:
