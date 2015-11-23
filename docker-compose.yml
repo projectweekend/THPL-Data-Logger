@@ -1,0 +1,16 @@
+db:
+    image: postgres:9.4
+flyway:
+    image: projectweekend/flyway
+    volumes:
+        - ./local_migrate.sh:/src/local_migrate.sh
+        - ./sql:/opt/flyway-3.2.1/sql
+    links:
+        - db
+app:
+    build: .
+    command: python main.py
+    volumes:
+        - .:/src
+    links:
+        - db
