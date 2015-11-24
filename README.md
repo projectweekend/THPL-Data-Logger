@@ -9,7 +9,7 @@ Environment Variables
 
 The following environment variables are used:
 
-* `DATABASE_URL` - Postgres database connection URL
+* `THPL_DATABASE_URL` - Postgres database connection URL
 * `PICLOUD_URL` - URL for the [picloud](https://github.com/exitcodezero/picloud) server
 * `PICLOUD_API_KEY` - API key for the picloud server
 
