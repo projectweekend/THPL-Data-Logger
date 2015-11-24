@@ -13,9 +13,7 @@ publish:
 deploy:
     fabric:
         image: projectweekend/drone-fabric
-        environment:
-            - FLYWAY_DB_URL=$$FLYWAY_DB_URL
-            - FLYWAY_DB_USER=$$FLYWAY_DB_USER
-            - FLYWAY_DB_PASSWORD=$$FLYWAY_DB_PASSWORD
         commands:
             - --user=$$DEPLOY_USER --password=$$DEPLOY_PASSWORD --hosts=$$DEPLOY_HOST deploy
+        when:
+            branch: master
