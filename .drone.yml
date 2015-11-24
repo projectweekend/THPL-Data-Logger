@@ -10,3 +10,8 @@ publish:
         repo: projectweekend/thpl-data-logger
         when:
             branch: master
+deploy:
+    fabric:
+        image: projectweekend/drone-fabric
+        commands:
+            - --user=$$DEPLOY_USER --password=$$DEPLOY_PASSWORD --hosts=$$DEPLOY_HOST deploy

@@ -1,3 +1,19 @@
+THPL Data Logger
+====================
+
+This project subscribes to messages published by [Pi-THPL-Data-Reporter](https://github.com/projectweekend/Pi-THPL-Data-Reporter) and logs the data in a Postgres database.
+
+
+Environment Variables
+====================
+
+The following environment variables are used:
+
+* `THPL_DATABASE_URL` - Postgres database connection URL
+* `PICLOUD_URL` - URL for the [picloud](https://github.com/exitcodezero/picloud) server
+* `PICLOUD_API_KEY` - API key for the picloud server
+
+
 Database Migrations
 ====================
 
@@ -5,4 +21,14 @@ Database migrations are handled by [Flyway](http://flywaydb.org/) and files are 
 
 ```
 docker-compose run flyway ./local_migrate.sh
+```
+
+
+Run Locally
+====================
+
+The development environment for this project uses [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/). With those tools installed and database migrations applied, run the following to start it locally:
+
+```
+docker-compose up
 ```
