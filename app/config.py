@@ -1,7 +1,7 @@
 import os
 
 
-DATABASE_URL = os.getenv('DATABASE_URL', None)
+DATABASE_URL = os.getenv('THPL_DATABASE_URL', None)
 DB_PORT_5432_TCP_ADDR = os.getenv('DB_PORT_5432_TCP_ADDR', None)
 
 if DATABASE_URL is None:
