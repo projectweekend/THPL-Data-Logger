@@ -4,7 +4,7 @@ from app.utils.database import database_connection
 
 def main():
     db = database_connection()
-    picloud = PiCloud()
+    picloud = PiCloud(client_name='THPL-Data-Logger')
 
     def on_thpl_data(data):
         print(data)
